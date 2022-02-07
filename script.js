@@ -4,8 +4,9 @@ Swal.fire({
     inputAttributes: {
         autocapitalize: 'off'
     },
-    showCancelButton: true,
-    confirmButtonText: 'Look up',
+    showCancelButton: false,
+
+    confirmButtonText: 'Submit',
     showLoaderOnConfirm: true,
     preConfirm: (login) => {
         return fetch(`https://1dab-171-6-245-3.ngrok.io/v1/add?name=${login}`)
