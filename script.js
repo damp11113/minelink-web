@@ -10,11 +10,13 @@ Swal.fire({
     showLoaderOnConfirm: true,
     preConfirm: (login) => {
         return fetch(`https://1dab-171-6-245-3.ngrok.io/v1/add/${login}`)
+            .catch(response => {
                 Swal.fire({
                     title: 'Success!',
                     text: 'You have been added to the bot!',
                     icon: 'success',
                 }
             )
+        })
     },
 })
