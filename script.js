@@ -17,6 +17,9 @@ Swal.fire({
                     icon: 'success',
                 }
             )
+            .then(() => {
+                window.location.reload();
+            }
         })
     },
 })
