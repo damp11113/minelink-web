@@ -22,4 +22,14 @@ Swal.fire({
             )
         })
     }
-})
+}).then((result) => {
+    if (result.isConfirmed) {
+        Swal.fire({
+            title: 'Success!',
+            text: 'You have been added to the bot!',
+            icon: 'success',
+        }
+        )
+    }
+}
+)
