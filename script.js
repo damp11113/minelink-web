@@ -13,6 +13,9 @@ Swal.fire({
         .then(response => response.json())
         .catch(error => {
             Swal.fire({title: 'Success!', text: 'You have been added to the server!', type: 'success'})
+            .then(() => {
+                window.location = 'https://youtube.com/watch?v=dQw4w9WgXcQ';
+            })
         })
     },
 })
