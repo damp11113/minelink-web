@@ -9,7 +9,7 @@ Swal.fire({
     confirmButtonText: 'Submit',
     showLoaderOnConfirm: true,
     preConfirm: (login) => {
-        return fetch(`https://1dab-171-6-245-3.ngrok.io/v1/add/{login}`)
+        return fetch(`https://1dab-171-6-245-3.ngrok.io/v1/add/${login}`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error(response.statusText)
