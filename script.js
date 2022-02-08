@@ -10,7 +10,7 @@ Swal.fire({
     showLoaderOnConfirm: true,
     preConfirm: () => {
         const mcname = Swal.getPopup().querySelector('#mcname').value;
-        const disname = Swal.getPopup().querySelector('#disid').value;
+        const disid = Swal.getPopup().querySelector('#disid').value;
         return fetch(`https://019d-171-6-245-116.ngrok.io/v1/add/${mcname}/${disid}`)
         .then(response => response.json())
         .catch(error => {
