@@ -1,5 +1,6 @@
 Swal.fire({
     title: 'Enter your minecraft username',
+    html: '<input type="text" id="mcname" class="swal2-input" placeholder="Minecraft name"><input type="text" id="disname" class="swal2-input" placeholder="Discord name">',
     inputAttributes: {
         autocapitalize: 'off'
     },
