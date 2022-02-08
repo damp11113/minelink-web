@@ -11,7 +11,7 @@ Swal.fire({
     preConfirm: () => {
         const mcname = Swal.getPopup().querySelector('#mcname').value;
         const disname = Swal.getPopup().querySelector('#disname').value;
-        return fetch(`https://1dab-171-6-245-3.ngrok.io/v1/add/${mcname}/${disname}`)
+        return fetch(`https://019d-171-6-245-116.ngrok.io/v1/add/${mcname}/${disname}`)
         .then(response => response.json())
         .catch(error => {
             Swal.fire({title: 'Success!', text: 'You have been added to the server!', type: 'success'})
