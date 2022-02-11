@@ -11,12 +11,13 @@ Swal.fire({
     preConfirm: () => {
         const mcname = Swal.getPopup().querySelector('#mcname').value;
         const disid = Swal.getPopup().querySelector('#disid').value;
-        return fetch(`https://4463-171-6-239-150.ngrok.io/v1/add/${mcname}/${disid}`)
+        var response = await fetch(`https://4463-171-6-239-150.ngrok.io/v1/add/${mcname}/${disid}`)
         .then(response => response.json())
         .catch(error => {
-            Swal.fire({title: 'Success!', text: 'You have been added to the server!', type: 'success'})
-            .then(() => {
-                window.location.reload();
+            Swal.fire({
+                title: 'Step 1 success',
+                text: 'step 2: goto earthy-bikes.auto.playit.gg to verify your minecraft name',
+                icon: 'success'
             })
         })
     },
