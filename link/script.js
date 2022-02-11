@@ -11,7 +11,7 @@ Swal.fire({
     preConfirm: () => {
         const mcname = Swal.getPopup().querySelector('#mcname').value;
         const disid = Swal.getPopup().querySelector('#disid').value;
-        var response = await fetch(`https://4463-171-6-239-150.ngrok.io/v1/add/${mcname}/${disid}`)
+        return fetch(`https://4463-171-6-239-150.ngrok.io/v1/add/${mcname}/${disid}`)
         .then(response => response.json())
         .catch(error => {
             Swal.fire({
